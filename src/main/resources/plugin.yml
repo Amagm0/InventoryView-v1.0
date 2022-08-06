@@ -1,0 +1,28 @@
+name: InventoryView
+version: '${version}'
+main: com.github.amagm0.inventoryview.InventoryView
+api-version: 1.18.2
+authors: [ Amagm0 ]
+
+commands:
+  openender:
+    aliases: [oe,open-e]
+    default: op
+    description: View Enderchest
+    usage: /<command> [PlayerName]
+  openinventory:
+    aliases: [oi,open-i]
+    default: op
+    description: View Inventory
+    usage: /<command> [PlayerName]
+
+permissions:
+  inventoryview.*:
+    default: op
+    children:
+      inventoryview.openender: true
+      inventoryview.openinventory: true
+    inventoryview.openender:
+      default: op
+    inventoryview.openinventory:
+      default: op
